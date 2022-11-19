@@ -9,7 +9,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <router-link to="/" class="nav-link active" aria-current="page">Home</router-link>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Link</a>
@@ -36,12 +36,15 @@
         </div>
       </div>
     </nav>
-    <router-view/>
+    <div class="blogTable">
+      <router-view />
+    </div>
   </div>
 </template>
 <script>
 export default {
-  components: {},
+  components: {
+  },
   data () {
     return {
       sampleData: ''
@@ -54,3 +57,11 @@ export default {
   methods: {}
 }
 </script>
+<style scoped>
+.blogTable {
+  margin-left: auto;
+  margin-right: auto;
+  width: 750px;
+  box-sizing: inherit;
+}
+</style>

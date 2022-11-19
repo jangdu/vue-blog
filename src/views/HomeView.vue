@@ -1,17 +1,41 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <h1 class="title">myblog</h1>
+    <ul class="nav justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Active</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Tag</a>
+      </li>
+    </ul>
+    <PostList :postData="$store.state.postData"/>
   </div>
 </template>
-
 <script>
-// @ is an alias to /src
-
+import PostList from '../components/PostList.vue'
 export default {
-  name: 'HomeView',
   components: {
-
-  }
+    PostList
+  },
+  data () {
+    return {
+      sampleData: ''
+    }
+  },
+  setup () {},
+  created () {},
+  mounted () {},
+  unmounted () {},
+  methods: {}
 }
 </script>
+<style scoped>
+.margintag {
+  margin-top: 10%;
+}
+.title{
+  text-align: center;
+  margin: 5%;
+}
+</style>
