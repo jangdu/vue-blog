@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">JangDuBlog</a>
+        <router-link to="/" class="navbar-brand" aria-current="page">JangDuBlog</router-link>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -36,7 +36,7 @@
         </div>
       </div>
     </nav>
-    <div class="blogTable">
+    <div class="shadow-none p-3 mb-5 bg-light rounded" style="max-width: 750px; align-content: center; margin: 0 auto; margin-top: 2rem;">
       <router-view />
     </div>
   </div>
@@ -58,10 +58,5 @@ export default {
 }
 </script>
 <style scoped>
-.blogTable {
-  margin-left: auto;
-  margin-right: auto;
-  width: 750px;
-  box-sizing: inherit;
-}
+
 </style>

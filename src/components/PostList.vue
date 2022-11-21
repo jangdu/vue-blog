@@ -1,13 +1,15 @@
 <template>
   <div>
-    <button type="button" @click="$router.push('/addPost')" class="btn btn-outline-info">글쓰기</button>
-    <div class="postList" v-for="item in postData" :key="item">
-      <div class="card">
-        <div class="card-body">
-          <h2 @click="indexOfPostData(item)">{{item.title}}</h2>
-          <span>{{item.date}}</span>
-        </div>
-      </div>
+    <div class="nav justify-content-end">
+      <button type="button" @click="$router.push('/addPost')" class="btn btn-outline-info" style="margin: 2rem;">글쓰기</button>
+    </div>
+    <div class="shadow-lg p-3 mb-5 bg-body rounded" v-for="item in postData" :key="item">
+          <h2 class="listTitle" @click="indexOfPostData(item)">{{item.title}}</h2>
+          <div class="small-content" v-html="item.content.slice(0, 30)"></div>
+          <div class="information">
+            <span class="name">{{item.name}}</span>
+            <span class="date">{{item.date}}</span>
+          </div>
     </div>
   </div>
 </template>
@@ -37,8 +39,24 @@ export default {
 </script>
 <style scoped>
 .postList {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     line-height: 1.5;
+}
+.information {
+  margin-top: 0.3rem;
+  color: gray;
+  align-items: center;
+}
+.date {
+  margin: 0.2rem;
+}
+.name {
+  color: rgb(62, 62, 62);
+  margin: 0.2rem;
+}
+.listTitle{
+  cursor: pointer;
+  width: auto;
 }
 </style>

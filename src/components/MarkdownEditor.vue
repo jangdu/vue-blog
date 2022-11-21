@@ -24,12 +24,10 @@ export default {
 </script>
 <style scoped>
 .input {
-  overflow: auto;
-  box-sizing: border-box;
   resize: none;
   font-size: 18px;
-  padding: 15px;
-  width: 750px;
-  height: 600px;
+  margin: 0 auto;
+  height: 700px;
+  width: 100%;
 }
 </style>

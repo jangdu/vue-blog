@@ -1,11 +1,13 @@
 <template>
   <div>
-    <div>
-      <textarea class="input-title" placeholder="제목을 입력해요" v-model="newtitle"></textarea>
+    <div class="shadow-lg p-3 mb-5 bg-body rounded" >
+        <input class="input-title" placeholder="제목" v-model="newtitle">
     </div>
-    <MarkdownEditor @write="newPostContent = $event"/>
-    <div style="display: 'flex';">
-      <button type="button" @click="addPost" class="btn btn-outline-info" style="float: right; margin: 1rem;">올리기</button>
+    <div class="shadow-lg p-3 mb-5 bg-body rounded">
+      <MarkdownEditor @write="newPostContent = $event"/>
+    </div>
+    <div>
+      <button type="button" @click="addPost" class="btn btn-outline-info" style="float: right;">올리기</button>
     </div>
   </div>
 </template>
@@ -44,15 +46,11 @@ export default {
 }
 </script>
 <style scoped>
-.input-title {
-  width: 750px;
-  height: 60px;
-  padding: 0.8rem;
-  margin-top: 1.4rem;
-  margin-bottom: 2rem;
-  text-align: center;
-  font-size: 20px;
+.input-title{
   resize: none;
-  border: 0;
+  text-align: center;
+  font-size: 25px;
+  margin: 0 auto;
+  width: 100%;
 }
 </style>

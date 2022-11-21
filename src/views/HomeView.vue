@@ -31,11 +31,9 @@ export default {
 }
 </script>
 <style scoped>
-.margintag {
-  margin-top: 10%;
-}
 .title{
   text-align: center;
-  margin: 5%;
+  margin: 0 auto;
+  margin-top: 2rem;
 }
 </style>
